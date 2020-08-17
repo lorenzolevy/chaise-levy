@@ -2,7 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 
 import Layout from "../features/Layout"
-import FluidImage from "../features/FluidImage/FluidImage"
+import FluidImage from "../features/FluidImage"
 import SEO from "../features/Seo"
 import { graphql } from "gatsby"
 

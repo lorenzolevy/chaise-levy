@@ -1,3 +1,3 @@
-## Gatbsy Starter SC
+## Ola Forman Portfolio
 
-A gatsby starter that deals with the hotloader error, sets up gfonts prefetching, and sets up globalStyles and themeing variables for Styled-Components.
+A gatsby site built with styled components to display the works of Ola Forman.
