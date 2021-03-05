@@ -43,7 +43,6 @@ const GlobalStyle = createGlobalStyle`
 
 // wrapRootElement is a gatsby built-in, used here to wrap the whole
 // with theme so I can grab variables for styling
-
 export const wrapRootElement = ({ element }) => (
   <ThemeProvider theme={Theme}>
     <GlobalStyle />

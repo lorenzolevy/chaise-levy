@@ -1,3 +1,10 @@
+const supportsTouch = () =>
+  ["iPad Simulator", "iPad", "iPhone", "iPod Simulator", "I"].includes(
+    navigator.platform
+  ) ||
+  (navigator.userAgent.includes("Mac") && "ontouchend" in document) ||
+  /Android|webOS|iPhone|iPad|Opera Mini/i.test(navigator.userAgent)
+
 export default {
   fonts: {
     header: `Montserrat`,
@@ -15,6 +22,7 @@ export default {
   breakpoints: {
     mobile: "only screen and (max-width: 50rem)",
     tablet: "only screen and (max-width: 65rem)",
+    supportsTouch: typeof navigator !== "undefined" ? supportsTouch() : false,
   },
   spacings: {
     xxSmall: ".25rem",

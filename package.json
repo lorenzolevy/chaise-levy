@@ -1,10 +1,11 @@
 {
-  "name": "gatsby-sc-hotloaderfix-starter",
+  "name": "chaise-levy",
   "private": true,
-  "description": "A gatsby starter ready for gloabl styles and theming with styled-components (with reset) and hotloader fix",
+  "description": "A gatsby site built for storyteller, rune reader, and dungeon master Chaise Levy.",
   "version": "1.0.0",
   "author": "Lorenzo Levy <lorenzoroccolevy@gmail.com",
   "dependencies": {
+    "@fontsource/skranji": "^4.2.1",
     "@hot-loader/react-dom": "^16.12.0",
     "babel-plugin-styled-components": "^1.11.1",
     "gatsby": "^2.23.12",
@@ -15,12 +16,14 @@
     "gatsby-plugin-react-helmet": "^3.3.6",
     "gatsby-plugin-sharp": "^2.6.14",
     "gatsby-plugin-styled-components": "^3.3.10",
+    "gatsby-plugin-web-font-loader": "^1.0.4",
     "gatsby-source-filesystem": "^2.3.14",
     "gatsby-transformer-sharp": "^2.5.7",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-helmet": "^6.1.0",
+    "react-particles-js": "^3.4.1",
     "styled-components": "^5.1.1",
     "styled-reset": "^4.2.2"
   },

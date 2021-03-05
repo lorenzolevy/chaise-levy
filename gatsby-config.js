@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `Ola Forman`,
-    description: `New graduate from Drama Studio London. Bilingual (Polish/English) and particularly passionate about Shakespeare and voice acting.`,
+    title: `Chaise Levy - Storyteller, Rune Reader, Dungeon Master`,
+    description: `Chaise Levy studies myths and magical traditions, and is profoundly committed to the power of image, story, and magic in his work as a storyteller, rune reader, and dungeon master.`,
     author: `@lorenzolevy`,
   },
   plugins: [
@@ -11,21 +11,6 @@ module.exports = {
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
-      },
-    },
-    {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
-      options: {
-        fonts: [
-          {
-            family: `Montserrat`,
-            variants: [`400`, `700`],
-          },
-          {
-            family: `Arvo`,
-            variants: [`400`, `700`],
-          },
-        ],
       },
     },
     `gatsby-transformer-sharp`,

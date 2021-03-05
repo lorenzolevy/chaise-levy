@@ -1,3 +1,3 @@
-## Ola Forman Portfolio
+## Chaise Levy Gatsby Site
 
-A gatsby site built with styled components to display the works of Ola Forman.
+A gatsby site built with styled components to display and communicate the work of Chaise Levy.

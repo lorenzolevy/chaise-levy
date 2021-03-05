@@ -1,37 +1,30 @@
 import React, { Fragment } from "react"
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
+import Navbar from "../Navbar"
 
-import Header from "../../primitives/Header"
-
-const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
-
+const Layout = ({ landing, children }) => {
   return (
     <Fragment>
-      <Header siteTitle={data.site.siteMetadata.title} />
-      <div>
-        <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
-      </div>
+      {!landing && <Navbar />}
+      <main>{children}</main>
+      <footer
+        style={{
+          backgroundColor: "#03031d",
+        }}
+      >
+        footer
+      </footer>
     </Fragment>
   )
 }
 
+Layout.defaultProps = {
+  landing: false,
+}
+
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
+  landing: PropTypes.bool,
 }
 
 export default Layout
