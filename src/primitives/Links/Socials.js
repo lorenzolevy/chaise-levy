@@ -4,22 +4,27 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faLinkedin, faInstagram } from "@fortawesome/free-brands-svg-icons"
 
 const StyledSocials = styled.div`
+  margin-bottom: 3.2rem;
+  cursor: pointer;
   > p {
     font-family: "Norse Bold";
     font-size: 1.8rem;
     margin-bottom: 0;
     text-align: center;
+    @media only screen and (max-width: 700px) {
+      margin-bottom: 31px;
+    }
   }
   .icon {
     color: hsla(28, 10%, 98%, 1);
     transition: 350ms filter ease;
-    font-size: 34px;
+    font-size: 45px;
   }
   .linkedin {
-    margin: 0 8px 0 0;
+    margin: 0 12px 0 0;
   }
   .insta {
-    margin: 0 0 0 8px;
+    margin: 0 0 0 12px;
   }
   > div {
     display: flex;
@@ -39,7 +44,7 @@ const StyledSocials = styled.div`
 const Socials = () => {
   return (
     <StyledSocials>
-      <p>Follow Me</p>
+      <p className="nav-header">Follow Me</p>
       <div>
         <a>
           <FontAwesomeIcon

@@ -15,8 +15,9 @@ export const Row = styled.div`
   flex-wrap: wrap;
   > * {
     margin: 1.8rem 2.4rem 0.6rem;
-    @media only screen and (max-width: 565px) {
+    @media only screen and (max-width: 700px) {
       min-width: 100%;
+      margin: 2.2rem 2.6rem 1.2rem;
     }
   }
 
@@ -26,6 +27,9 @@ export const Row = styled.div`
     cursor: pointer;
   }
   padding: 1rem 0;
+  @media only screen and (max-width: 700px) {
+    justify-content: center;
+  }
 `
 
 export const Legal = styled.p`

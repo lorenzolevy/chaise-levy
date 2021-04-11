@@ -57,6 +57,11 @@ const GlobalStyle = createGlobalStyle`
     margin-bottom: 1.6875rem;
     font-weight: 400;
   }
+  @media only screen and (max-width: 700px) {
+    .nav-header {
+      font-size: 40px!important;
+    }
+  }
 `
 
 // wrapRootElement is a gatsby built-in, used here to wrap the whole

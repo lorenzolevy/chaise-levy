@@ -10,6 +10,9 @@ export const NavWrapper = styled.nav`
     font-size: 36px;
     font-family: "Norse Bold";
     padding: 1rem 1.8rem;
+    @media only screen and (max-width: 700px) {
+      font-size: 40px;
+    }
   }
   display: flex;
   justify-content: space-between;
@@ -74,5 +77,6 @@ export const NavItems = styled.div`
     height: auto;
     position: relative;
     margin-right: 0;
+    margin-bottom: 3.2rem;
   }
 `

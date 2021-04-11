@@ -8,7 +8,7 @@ export const LinksContainer = styled.div`
   text-align: center;
   > p {
     font-family: "Norse Bold";
-    font-size: 1.8rem;
+    font-size: 40px;
     margin-bottom: 0;
   }
   a {

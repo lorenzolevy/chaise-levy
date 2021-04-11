@@ -5,13 +5,20 @@ import { faPhoneAlt } from "@fortawesome/free-solid-svg-icons"
 import { faEnvelope } from "@fortawesome/free-regular-svg-icons"
 
 export const StyledContacts = styled.div`
+  margin-bottom: 3.2rem;
   text-align: center;
+  box-sizing: border-box;
   > p {
     font-family: "Norse Bold";
     font-size: 1.8rem;
     margin-bottom: 0;
+    @media only screen and (max-width: 700px) {
+      margin-bottom: 31px;
+    }
   }
-
+  .icon {
+    color: white;
+  }
   > div {
     display: flex;
     align-items: center;
@@ -25,13 +32,13 @@ export const StyledContacts = styled.div`
       }
     }
 
-    .email {
-      margin: 0 8px 0 0;
-      font-size: 32px;
-    }
     .phone {
-      font-size: 34px;
-      margin: 0 0 0 8px;
+      margin: 0 12px 0 0;
+      font-size: 38px;
+    }
+    .email {
+      font-size: 42px;
+      margin: 0 0 0 12px;
     }
   }
 `
@@ -39,13 +46,13 @@ export const StyledContacts = styled.div`
 const ContactInfo = () => {
   return (
     <StyledContacts>
-      <p>Contact Me</p>
+      <p className="nav-header">Contact Me</p>
       <div>
         <a href="tel:310-710-5223">
-          <FontAwesomeIcon icon={faPhoneAlt} size="1x" className="icon email" />
+          <FontAwesomeIcon icon={faPhoneAlt} size="1x" className="icon phone" />
         </a>
         <a href="mailto:chaiselevy@gmail.com">
-          <FontAwesomeIcon icon={faEnvelope} size="1x" className="icon phone" />
+          <FontAwesomeIcon icon={faEnvelope} size="1x" className="icon email" />
         </a>
       </div>
     </StyledContacts>

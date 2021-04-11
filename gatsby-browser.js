@@ -19,7 +19,9 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Norse Bold';
     src: local('Norse Bold'), url('${fonts.NorseBold}') format('woff2');
   }
-
+  > * {
+    box-sizing: border-box;
+  }
   body, html {
       line-height: 1;
       font-family: "Norse";
@@ -58,6 +60,12 @@ const GlobalStyle = createGlobalStyle`
   p {
     margin-bottom: 1.6875rem;
     font-weight: 400;
+  }
+
+  @media only screen and (max-width: 700px) {
+    .nav-header {
+      font-size: 40px!important;
+    }
   }
 `
 

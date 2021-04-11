@@ -6,6 +6,7 @@ import MobileMenuButton from "./primitives/MobileMenuButton"
 
 import { NavWrapper, NavItems } from "./Navbar.styles"
 import theme from "../../themes/theme"
+import { ContactInfo, Socials } from "../../primitives/Links"
 
 const navLinks = [
   {
@@ -68,6 +69,12 @@ const Navbar = () => {
           </Link>
         ))}
       </NavItems>
+      {size.width < theme.breakpoints.nav && isMobileNavOpen && (
+        <>
+          <ContactInfo />
+          <Socials />
+        </>
+      )}
       <MobileMenuButton
         setMobileNavOpen={() => setMobileNavOpen(!isMobileNavOpen)}
         isMobileNavOpen={isMobileNavOpen}
