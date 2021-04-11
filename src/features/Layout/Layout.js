@@ -1,19 +1,14 @@
 import React, { Fragment } from "react"
 import PropTypes from "prop-types"
 import Navbar from "../Navbar"
+import Footer from "../Footer"
 
 const Layout = ({ landing, children }) => {
   return (
     <Fragment>
-      {!landing && <Navbar />}
+      <Navbar />
       <main>{children}</main>
-      <footer
-        style={{
-          backgroundColor: "#03031d",
-        }}
-      >
-        footer
-      </footer>
+      <Footer />
     </Fragment>
   )
 }

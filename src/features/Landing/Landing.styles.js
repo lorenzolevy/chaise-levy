@@ -10,6 +10,18 @@ export const LandingOuter = styled.section`
       rgba(183, 35, 14, 1) 0%,
       rgba(3, 3, 29, 1) 800px
     );
+    @media only screen and (max-width: 950px) {
+      background: radial-gradient(
+        rgba(183, 35, 14, 1) 0%,
+        rgba(3, 3, 29, 1) 70%
+      );
+    }
+    @media only screen and (max-width: 500px) {
+      background: radial-gradient(
+        rgba(183, 35, 14, 1) 0%,
+        rgba(3, 3, 29, 1) 90%
+      );
+    }
     position: absolute;
     width: 100%;
     height: 100%;
@@ -20,15 +32,22 @@ export const RunesOuter = styled.div`
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-
+  padding: 3rem 0rem;
   align-items: center;
   justify-content: center;
+  > p {
+    z-index: 50;
+    font-size: 2.1rem;
+    text-align: center;
+    font-family: "Source Sans Pro";
+    margin: 0 1.8rem 2rem;
+  }
   > h1 {
     z-index: 50;
 
-    font-size: 90px;
+    font-size: 5.625rem;
     margin-top: 4.5rem;
-    margin-bottom: 4.75rem;
+    margin-bottom: 2rem;
     animation: glow 6s ease-in-out infinite alternate;
     @keyframes glow {
       from {
@@ -43,6 +62,10 @@ export const RunesOuter = styled.div`
 
     letter-spacing: 0.35rem;
     font-weight: 400;
+    @media only screen and (max-width: 500px) {
+      text-align: center;
+      line-height: 1;
+    }
   }
 `
 
@@ -96,7 +119,7 @@ export const RuneText = styled.div`
   margin-top: 1.6rem;
   transition: opacity 0.3s ease-in-out;
   .rune-header {
-    font-size: 40px;
+    font-size: 2.5rem;
     font-weight: 400;
     color: hsla(28, 10%, 98%, 1);
   }

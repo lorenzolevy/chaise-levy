@@ -22,6 +22,7 @@ export default {
   breakpoints: {
     mobile: "only screen and (max-width: 50rem)",
     tablet: "only screen and (max-width: 65rem)",
+    nav: 950,
     supportsTouch: typeof navigator !== "undefined" ? supportsTouch() : false,
   },
   spacings: {

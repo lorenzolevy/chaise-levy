@@ -18,6 +18,7 @@ const Landing = ({ runes }) => {
       <Particles id="particles" params={particlesJson} />
       <RunesOuter>
         <h1>Chaise Levy</h1>
+        <p>Which is your storyline? Add the power of story into your life.</p>
         <RunesWrapper>
           {runes &&
             runes.map((rune, index) => (
