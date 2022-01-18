@@ -7,13 +7,15 @@ export const LinksContainer = styled.div`
   flex-direction: column;
   text-align: center;
   > p {
-    font-family: "Norse Bold";
-    font-size: 40px;
+    font-family: "odile-upright-italic";
+    font-size: 1.8rem;
     margin-bottom: 0;
+    font-weight: 800;
   }
   a {
-    font-family: "Source Sans Pro";
-    font-size: 20px;
+    font-family: "Francois One";
+    font-size: 1.2rem;
+    font-weight: 400;
     color: hsla(28, 10%, 98%);
 
     &:hover {

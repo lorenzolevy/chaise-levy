@@ -1,11 +1,11 @@
 import React from "react"
-import Img from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 
-const FluidImage = ({ fluid }) => {
+const FluidImage = ({ fluid, maxWidth }) => {
   return (
-    <Img
-      style={{ maxWidth: fluid.presentationWidth, width: "100%" }}
-      fluid={fluid}
+    <GatsbyImage
+      image={fluid}
+      style={{ maxWidth: maxWidth, width: "100%" }}
     />
   )
 }

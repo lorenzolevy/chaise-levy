@@ -9,8 +9,10 @@ export const StyledContacts = styled.div`
   text-align: center;
   box-sizing: border-box;
   > p {
-    font-family: "Norse Bold";
+    font-family: "odile-upright-italic";
     font-size: 1.8rem;
+    margin-bottom: 0;
+    font-weight: 800;
     margin-bottom: 0;
     @media only screen and (max-width: 700px) {
       margin-bottom: 31px;

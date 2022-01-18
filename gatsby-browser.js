@@ -3,28 +3,40 @@ import { ThemeProvider } from "styled-components"
 import Theme from "./src/themes/theme"
 import { createGlobalStyle } from "styled-components"
 import reset from "styled-reset"
-import * as fonts from "./src/fonts"
-import "@fontsource/open-sans"
+import "@fontsource/francois-one"
 
 // Resets and other globals
 const GlobalStyle = createGlobalStyle`
   ${reset}
+  @import url("https://p.typekit.net/p.css?s=1&k=ykt1rxh&ht=tk&f=30021.30022&a=68385155&app=typekit&e=css");
   @font-face {
-    font-family: 'Norse';
+    font-family: "odile-ornaments";
+    src: url("https://use.typekit.net/af/31b079/00000000000000003b9ae38c/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff2"),url("https://use.typekit.net/af/31b079/00000000000000003b9ae38c/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff"),url("https://use.typekit.net/af/31b079/00000000000000003b9ae38c/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("opentype");
+    font-display: auto;
     font-style: normal;
-    font-weight: normal;
-    src: local('Norse'), url('${fonts.Norse}') format('woff2');
+    font-weight: 400;
   }
   @font-face {
-    font-family: 'Norse Bold';
-    src: local('Norse Bold'), url('${fonts.NorseBold}') format('woff2');
+    font-family:"odile-deco-initials";
+    src: url("https://use.typekit.net/af/df8efa/00000000000000003b9ae38a/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff2"),url("https://use.typekit.net/af/df8efa/00000000000000003b9ae38a/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff"),url("https://use.typekit.net/af/df8efa/00000000000000003b9ae38a/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("opentype");
+    font-display: auto;
+    font-style: normal;
+    font-weight: 400;
+  }
+  @font-face {
+    font-family: "odile-upright-italic";
+    src: url("https://use.typekit.net/af/983c07/00000000000000003b9ae38d/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff2"),url("https://use.typekit.net/af/983c07/00000000000000003b9ae38d/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff"),url("https://use.typekit.net/af/983c07/00000000000000003b9ae38d/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("opentype");
+    font-display: auto;
+    font-style: normal;
+    font-weight: 400;
   }
   > * {
     box-sizing: border-box;
   }
   body, html {
+      scroll-behavior: smooth;
       line-height: 1;
-      font-family: "Norse";
+      font-family: "Francois One";
       font-size: 16px;
       @media only screen and (max-width: 950px) {
         font-size: 14px;
@@ -61,15 +73,9 @@ const GlobalStyle = createGlobalStyle`
     margin-bottom: 1.6875rem;
     font-weight: 400;
   }
-
-  @media only screen and (max-width: 700px) {
-    .nav-header {
-      font-size: 40px!important;
-    }
-  }
 `
 
-// wrapRootElement is a gatsby built-in, used here to wrap the whole
+// wrapPageElement is a gatsby built-in, used here to wrap the whole
 // with theme so I can grab variables for styling
 export const wrapPageElement = ({ element }) => (
   <ThemeProvider theme={Theme}>
@@ -77,3 +83,9 @@ export const wrapPageElement = ({ element }) => (
     {element}
   </ThemeProvider>
 )
+
+export const onClientEntry = async () => {
+  if (typeof IntersectionObserver === "undefined") {
+    await import("intersection-observer")
+  }
+}

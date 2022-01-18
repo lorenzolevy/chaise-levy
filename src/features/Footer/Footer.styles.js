@@ -54,7 +54,6 @@ export const Legal = styled.p`
 
 export const Socials = styled.div`
   > p {
-    font-family: "Norse Bold";
     font-size: 1.8rem;
     margin-bottom: 0;
     text-align: center;

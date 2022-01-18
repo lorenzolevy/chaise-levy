@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react"
 import { Link } from "gatsby"
 import { withTheme } from "styled-components"
-
+import { StaticImage } from "gatsby-plugin-image"
 import MobileMenuButton from "./primitives/MobileMenuButton"
 
 import { NavWrapper, NavItems } from "./Navbar.styles"
@@ -10,20 +10,24 @@ import { ContactInfo, Socials } from "../../primitives/Links"
 
 const navLinks = [
   {
-    to: "/dungeon-master",
+    to: "/dungeon-master/",
     text: "Dungeon Master",
   },
   {
-    to: "/storyteller",
+    to: "/storyteller/",
     text: "Storyteller",
   },
   {
-    to: "/rune-reader",
+    to: "/rune-reader/",
     text: "Rune Reader",
   },
+  {
+    to: "/about/",
+    text: "About"
+  }
 ]
 
-const Navbar = () => {
+const Navbar = ({ data }) => {
   const [isMobileNavOpen, setMobileNavOpen] = useState(false)
   const useWindowSize = () => {
     const [windowSize, setWindowSize] = useState({
@@ -57,9 +61,11 @@ const Navbar = () => {
 
   return (
     <NavWrapper isMobileNavOpen={isMobileNavOpen}>
-      <Link to="/">
-        <p className="placeholder">Chaise Levy</p>
-      </Link>
+      <div className="logo-container">
+        <Link to="/">
+          <StaticImage src="../../images/logo.png" alt="Chaise Levy logo and link to home" width={300} layout="fixed" />
+        </Link>
+      </div>
       <NavItems>
         {navLinks.map((link, i) => (
           <Link key={`link ${i}`} className={`a-tag-${i}`} to={link.to}>

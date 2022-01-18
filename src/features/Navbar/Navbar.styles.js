@@ -4,21 +4,15 @@ export const NavWrapper = styled.nav`
   background-color: #03031d;
   z-index: 100;
   height: 72px;
-  .placeholder {
-    margin-bottom: 0;
-    color: white;
-    font-size: 36px;
-    font-family: "Norse Bold";
-    padding: 1rem 1.8rem;
-    @media only screen and (max-width: 700px) {
-      font-size: 40px;
-    }
+  .logo-container {
+    padding-left: 1rem;
+    max-width: 300px;
   }
   display: flex;
   justify-content: space-between;
   align-items: center;
 
-  @media only screen and (max-width: 700px) {
+  @media only screen and (max-width: 900px) {
     position: fixed;
     transition: right 350ms ease-in;
     width: 100vw;
@@ -40,7 +34,7 @@ export const NavItems = styled.div`
     margin-bottom: 0;
     line-height: 1;
     font-size: 20px;
-    font-family: "Source Sans Pro";
+    font-family: "Francois One";
     transition: 350ms all ease;
     padding: 2px;
   }
@@ -51,7 +45,7 @@ export const NavItems = styled.div`
     justify-content: center;
   }
   > a {
-    @media only screen and (max-width: 700px) {
+    @media only screen and (max-width: 900px) {
       margin-left: 0;
       margin: 1.2rem 0;
       .menu-item-text {
@@ -72,7 +66,7 @@ export const NavItems = styled.div`
     padding: 4px;
   }
 
-  @media only screen and (max-width: 700px) {
+  @media only screen and (max-width: 900px) {
     display: block;
     height: auto;
     position: relative;

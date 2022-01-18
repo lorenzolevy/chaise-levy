@@ -10,12 +10,12 @@ const ButtonWrapper = styled.div`
   flex-direction: column;
   justify-content: space-between;
 
-  @media only screen and (max-width: 700px) {
+  @media only screen and (max-width: 900px) {
     display: flex;
     position: fixed;
-    width: 24px;
-    top: 26px;
-    right: 26px;
+    width: 1.5rem;
+    top: 1.8rem;
+    right: 1.6rem;
     &:hover {
       .line {
         box-shadow: 1px 1px 0px 0px rgba(183, 35, 14, 1);

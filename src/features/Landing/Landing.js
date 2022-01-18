@@ -11,20 +11,21 @@ import {
   RuneText,
 } from "./Landing.styles"
 import FluidImage from "../FluidImage"
+import { GatsbyImage } from "gatsby-plugin-image"
 
 const Landing = ({ runes }) => {
   return (
     <LandingOuter>
       <Particles id="particles" params={particlesJson} />
       <RunesOuter>
-        <h1>Chaise Levy</h1>
-        <p>Which is your storyline? Add the power of story into your life.</p>
+        <h1>CHAISE LEVY</h1>
+        <p>Which is your storyline? Bring the power of story into your life.</p>
         <RunesWrapper>
           {runes &&
             runes.map((rune, index) => (
               <Rune index={index} key={`rune-${index}`}>
                 <Link to={rune.to}>
-                  <FluidImage fluid={rune.fluid} />
+                  <GatsbyImage image={rune.fluid} alt={rune.header} loading="eager" />
                   <RuneText className="text">
                     <p className="rune-header">{rune.header}</p>
                     {rune.body && <p className="rune-body">{rune.body}</p>}

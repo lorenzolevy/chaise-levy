@@ -2,59 +2,49 @@ import React from "react"
 import { graphql } from "gatsby"
 // features
 import Layout from "../features/Layout"
-import SEO from "../features/Seo"
+import Seo from "../features/Seo"
 import Landing from "../features/Landing"
 
-export const query = graphql`
-  query HomePageQuery {
-    runeLeft: file(relativePath: { eq: "dungeonmaster.png" }) {
-      childImageSharp {
-        fluid(maxWidth: 300) {
-          presentationWidth
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-    runeCenter: file(relativePath: { eq: "storyteller.png" }) {
-      childImageSharp {
-        fluid(maxWidth: 300) {
-          presentationWidth
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-    runeRight: file(relativePath: { eq: "runereader.png" }) {
-      childImageSharp {
-        fluid(maxWidth: 300) {
-          presentationWidth
-          ...GatsbyImageSharpFluid
-        }
-      }
+export const query = graphql`query HomePageQuery {
+  runeLeft: file(relativePath: {eq: "dungeonmaster.png"}) {
+    childImageSharp {
+      gatsbyImageData(width: 300, placeholder: BLURRED, layout: CONSTRAINED)
     }
   }
+  runeCenter: file(relativePath: {eq: "storyteller.png"}) {
+    childImageSharp {
+      gatsbyImageData(width: 300, placeholder: BLURRED, layout: CONSTRAINED)
+    }
+  }
+  runeRight: file(relativePath: {eq: "runereader.png"}) {
+    childImageSharp {
+      gatsbyImageData(width: 300, placeholder: BLURRED, layout: CONSTRAINED)
+    }
+  }
+}
 `
 
 const IndexPage = ({ data }) => {
   const landingData = [
     {
-      fluid: data.runeLeft.childImageSharp.fluid,
+      fluid: data.runeLeft.childImageSharp.gatsbyImageData,
       to: "/dungeon-master/",
       header: "Dungeon Master",
     },
     {
-      fluid: data.runeCenter.childImageSharp.fluid,
+      fluid: data.runeCenter.childImageSharp.gatsbyImageData,
       to: "/storyteller/",
       header: "Storyteller",
     },
     {
-      fluid: data.runeRight.childImageSharp.fluid,
+      fluid: data.runeRight.childImageSharp.gatsbyImageData,
       to: "/rune-reader/",
       header: "Rune Reader",
     },
   ]
   return (
     <Layout landing>
-      <SEO title="Home" />
+      <Seo title="Home" />
 
       <Landing runes={landingData} />
     </Layout>

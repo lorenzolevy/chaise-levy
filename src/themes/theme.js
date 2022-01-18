@@ -5,10 +5,9 @@ const supportsTouch = () =>
   (navigator.userAgent.includes("Mac") && "ontouchend" in document) ||
   /Android|webOS|iPhone|iPad|Opera Mini/i.test(navigator.userAgent)
 
-export default {
+const Theme = {
   fonts: {
-    header: `Montserrat`,
-    body: `Arvo`,
+    body: `Souce Sans Pro`,
   },
   colors: {
     main1: "hsl(207,70%,59%)",
@@ -25,20 +24,6 @@ export default {
     nav: 950,
     supportsTouch: typeof navigator !== "undefined" ? supportsTouch() : false,
   },
-  spacings: {
-    xxSmall: ".25rem",
-    xSmall: ".5rem",
-    small: "1rem",
-    medium: "2rem",
-    large: "3rem",
-    xLarge: "4rem",
-    xxLarge: "6rem",
-  },
-  animations: {
-    button: "box-shadow 0.3s ease",
-    link: "color 0.2s ease",
-  },
-  shadows: {
-    shadow1: "0px 5px 20px rgba(30, 30, 31, 0.05)",
-  },
 }
+
+export default Theme

@@ -31,7 +31,7 @@ export const LandingOuter = styled.section`
 export const RunesOuter = styled.div`
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  
   padding: 3rem 0rem;
   align-items: center;
   justify-content: center;
@@ -39,15 +39,18 @@ export const RunesOuter = styled.div`
     z-index: 50;
     font-size: 2.1rem;
     text-align: center;
-    font-family: "Source Sans Pro";
     margin: 0 1.8rem 2rem;
+    @media only screen and (max-width: 650px) {
+      font-size: 1.8rem;
+    }
   }
   > h1 {
     z-index: 50;
-
-    font-size: 5.625rem;
-    margin-top: 4.5rem;
+    font-size: 4.8rem;
+    margin-top: 3rem;
     margin-bottom: 2rem;
+    font-family: odile-upright-italic;
+    font-weight: 800;
     animation: glow 6s ease-in-out infinite alternate;
     @keyframes glow {
       from {
@@ -59,9 +62,10 @@ export const RunesOuter = styled.div`
           1px 1px 20px rgba(183, 35, 14, 1);
       }
     }
-
     letter-spacing: 0.35rem;
-    font-weight: 400;
+    @media only screen and (max-width: 650px) {
+      font-size: 3rem;
+    }
     @media only screen and (max-width: 500px) {
       text-align: center;
       line-height: 1;
@@ -85,10 +89,10 @@ export const Rune = styled.div`
   display: block;
   width: 100%;
   max-width: 300px;
-  filter: brightness(
-    ${({ theme }) => (theme.breakpoints.supportsTouch ? ".8" : "0.1")}
-  );
-
+  filter: brightness(0.1);
+  @media only screen and (max-width: 500px) {
+    filter: brightness(1);
+  }
   margin: 1rem;
   transform: translateY(0px);
   @keyframes float {
@@ -122,5 +126,7 @@ export const RuneText = styled.div`
     font-size: 2.5rem;
     font-weight: 400;
     color: hsla(28, 10%, 98%, 1);
+    font-family: odile-upright-italic;
+    font-weight: 800;
   }
 `
